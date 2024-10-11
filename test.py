@@ -26,7 +26,7 @@ def customCallback(client, userdata, message):
 	print("from topic: ")
 	print(message.topic)
 
-	if msg["temperature"] > 26.0:
+	if msg:
 		GPIO.output(19, GPIO.HIGH)
 		time.sleep(0.5)
 		GPIO.output(19, GPIO.LOW)
